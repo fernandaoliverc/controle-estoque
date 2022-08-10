@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+	<link rel="stylesheet" href="materialize/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Index</title>
+</head>
+
+<body>
+	<nav>
+		<div class="nav-wrapper">
+			<a class="brand-logo">Villas Burguer </a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a class="right hide-on-med-and-down" th:href="@{/cadastrar}">Cadastrar</a></li>
+				<li><a class="right hide-on-med-and-down" th:href="@{/consultar}">Consultar</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+	<link rel="stylesheet" href="materialize/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Alterar Produto</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="titulo">Alterar Produto</h1>
+	
+		<form th:action="@{/cadastrar}" method="post" th:object="${estoque}">
+	
+			<label>Id</label>
+			<input class="input-field" type="text" th:field="*{id}" readonly>
+		
+			<label>Item</label>
+			<input id="idItem" type="text" th:field="*{item}">
+	
+			<label>Fornecedor</label>
+			<input id="idFornecedor" type="text" th:field="*{fornecedor}">
+	
+			<label>Estoque Minimo</label>
+			<input id="idEstoqueMinimo" type="text" th:field="*{estoqueMinimo}">
+	
+			<label>Estoque Atual</label>
+			<input id="idEstoqueAtual" type="text" th:field="*{estoqueAtual}">
+			<button class="waves-effect waves-grey btn">Salvar</button>
+	
+		</form>
+	</div>
+</body>
+
+</html>

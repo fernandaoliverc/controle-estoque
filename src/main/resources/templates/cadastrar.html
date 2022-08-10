@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+	<link rel="stylesheet" href="materialize/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Cadastrar</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="titulo">Cadastrar Estoque de Produtos</h1>
+
+		<form th:action="@{/cadastrar}" method="post">
+
+			<label>Item</label>
+			<input class="input-field" id="idItem" type="text" placeholder="Informe o item" name="item">
+
+			<label>Fornecedor</label>
+			<input id="idFornecedor" type="text" placeholder="Informe o fornecedor" name="fornecedor">
+
+			<label>Estoque Minimo</label>
+			<input id="idEstoqueMinimo" type="text" placeholder="Informe o estoque minimo" name="estoqueMinimo">
+
+			<label>Estoque Atual</label>
+			<input id="idEstoqueAtual" type="text" placeholder="Informe o estoque atual" name="estoqueAtual">
+			<button class="waves-effect waves-grey btn">Salvar</button>
+		</form>
+	</div>
+
+</body>
+
+</html>

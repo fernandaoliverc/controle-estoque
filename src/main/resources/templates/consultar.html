@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+	<link rel="stylesheet" href="materialize/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Estoque</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="titulo">Lista de Estoque</h1>
+		<table class="highlight centered responsive-table" width="100px">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Item</th>
+					<th>Fornecedor</th>
+					<th>Estoque Minimo</th>
+					<th>Estoque Atual</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="estoque:${estoques}">
+					<td th:text="*{estoque.id}"></td>
+					<td th:text="*{estoque.item}"></td>
+					<td th:text="*{estoque.fornecedor}"></td>
+					<td th:text="*{estoque.estoqueMinimo}"></td>
+					<td th:text="*{estoque.estoqueAtual}"></td>
+					<td>
+						<a th:href="@{'/consultar/'+${estoque.id}}">Editar</a>
+						<a th:href="@{'/excluir/'+${estoque.id}}">Excluir</a>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+		<a class="waves-effect waves-grey btn" th:href="@{/cadastrar}">Cadastrar</a>
+	</div>
+</body>
+
+</html>
